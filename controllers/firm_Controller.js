@@ -36,6 +36,7 @@ const addFirm = async(req, res)=>{
 
     const savedFirm = await firm.save();
     const firmId = savedFirm._id
+    const vendorFirmName = savedFirm.firmName
     vendor.firm.push(savedFirm)
 
     await vendor.save()
